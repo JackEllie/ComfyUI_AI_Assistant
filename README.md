@@ -1,6 +1,6 @@
 # ComfyUI_AI_Assistant
 
-[原始專案](https://github.com/tori29umai0123/AI-Assistant/blob/main/README.md?plain=1)
+[Original Project](https://github.com/tori29umai0123/AI-Assistant/blob/main/README.md?plain=1)
 
 # Related Features:
 ## Provides two additional preprocessors and a prompt organizing tool.
