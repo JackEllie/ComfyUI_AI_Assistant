@@ -3,10 +3,10 @@ name = "ComfyUI_AI_Assistant"
 description = "ComfyUI native implementation of [AI-Assistant](https://github.com/tori29umai0123/AI-Assistant)."
 version = "1.0.0"
 license = "LICENSE"
+dependencies = ["opencv-python"]
 
 [project.urls]
 Repository = "https://github.com/JackEllie/ComfyUI_AI_Assistant.git"
-#  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
 PublisherId = "jackellie"
