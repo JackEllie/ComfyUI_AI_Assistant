@@ -1,14 +1,14 @@
 [project]
-name = ""
-description = ""
+name = "ComfyUI_AI_Assistant"
+description = "ComfyUI native implementation of [a/AI-Assistant](https://github.com/tori29umai0123/AI-Assistant)."
 version = "1.0.0"
 license = "LICENSE"
 
 [project.urls]
-Repository = ""
+Repository = "https://github.com/JackEllie/ComfyUI_AI_Assistant.git"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
-DisplayName = "ComfyUI-AIT"
+PublisherId = "JackEllie"
+DisplayName = "ComfyUI_AI_Assistant"
 Icon = ""
