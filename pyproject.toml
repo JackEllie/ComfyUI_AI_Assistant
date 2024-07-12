@@ -9,6 +9,6 @@ Repository = "https://github.com/JackEllie/ComfyUI_AI_Assistant.git"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "JackEllie"
+PublisherId = "jackellie"
 DisplayName = "ComfyUI_AI_Assistant"
 Icon = ""
