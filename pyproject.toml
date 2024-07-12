@@ -1,6 +1,6 @@
 [project]
 name = "ComfyUI_AI_Assistant"
-description = "ComfyUI native implementation of [a/AI-Assistant](https://github.com/tori29umai0123/AI-Assistant)."
+description = "ComfyUI native implementation of [AI-Assistant](https://github.com/tori29umai0123/AI-Assistant)."
 version = "1.0.0"
 license = "LICENSE"
 
