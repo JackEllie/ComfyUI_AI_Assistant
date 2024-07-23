@@ -221,9 +221,7 @@ class clean_prompt_tags:
     def remove_prompt(self,base_prompt, remove_prompt,):
         
         # 移除末尾多餘的逗號並使用正規表達式來分割標籤
-        remove_prompt = remove_prompt.rstrip(', ')
-        base_prompt = base_prompt.rstrip(', ')
-
+        remove_prompt = re.sub(r',\s*$', '', remove_prompt).replace('\n', '')
 
         # 使用正規表達式來分割標籤，忽略逗號後的多餘空格
         prompt_list = re.split(r',\s*', base_prompt)
