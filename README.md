@@ -1,4 +1,4 @@
-[中文](README_zh_CN.md)  [EN](README.md)
+[中文](README_ZH_TW.md)  [EN](README.md)
 # ComfyUI_AI_Assistant
 
 [Original Project](https://github.com/tori29umai0123/AI-Assistant)
