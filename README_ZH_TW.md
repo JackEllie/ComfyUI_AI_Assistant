@@ -1,7 +1,7 @@
 [中文](README_zh_CN.md)  [EN](README.md)
 # ComfyUI_AI_Assistant
 
-[原始專案](https://github.com/tori29umai0123/AI-Assistant/blob/main/README.md?plain=1)
+[原始專案](https://github.com/tori29umai0123/AI-Assistant)
 
 # 相關功能:
 提供了兩個額外的預處理器，以及提詞整理工具
