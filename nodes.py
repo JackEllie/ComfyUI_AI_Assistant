@@ -21,6 +21,7 @@ class prompt_sorting:
     RETURN_NAMES = ("string",)
     FUNCTION = "execute"
     CATEGORY = "advanced/AI_Assistant/text"
+    
 
     def execute(self,string,remove_duplicate_tags):
          return (self.tidy_tags(string,remove_duplicate_tags),)
@@ -123,6 +124,15 @@ class apply_lighting_effects:
     RETURN_NAMES = ("image","show_help",)
     FUNCTION = "process"
     CATEGORY = "advanced/AI_Assistant/image"
+    DESCRIPTION = """
+光源方向參考參數如下:
+光源正前方=light_yaw:60 light_pitch:-60
+光源左上方=light_yaw:40 light_pitch:-60
+光源右上方=light_yaw:60 light_pitch:-40
+光源左=light_yaw:0 light_pitch:0
+光源右=light_yaw:90 light_pitch:0
+光源下方=light_yaw:45 light_pitch:0
+"""
 
 
     def process(self, image, light_yaw, light_pitch, specular_power, normal_diffuse_strength,
@@ -213,6 +223,17 @@ class clean_prompt_tags:
     RETURN_NAMES = ("string","show_help")
     FUNCTION = "execute"
     CATEGORY = "advanced/AI_Assistant/text"
+    DESCRIPTION = """
+粗略的移除工具:
+
+EX:
+base_prompt = masterpiece, best quality, monochrome, greyscale,blue_hair, blue_sky, blue_dress, pink_eyes, pink_bow, pink_panties
+
+removeprompt = pink, red, orange, brown, yellow, green, blue, purple, blonde, colored skin, white hair,
+
+輸出則為:
+masterpiece, best quality, monochrome, greyscale
+"""
 
     def execute(self,string,Clean_Prompt):
          show_help ="粗略的移除工具:\n\nEX:\n\nbase_prompt = masterpiece, best quality, monochrome, greyscale,blue_hair, blue_sky, blue_dress, pink_eyes, pink_bow, pink_panties\n\nremoveprompt = pink, red, orange, brown, yellow, green, blue, purple, blonde, colored skin, white hair,\n\n輸出則為:\nmasterpiece, best quality, monochrome, greyscale"
@@ -246,7 +267,14 @@ class prompt_blacklist:
     RETURN_NAMES = ("string","show_help")
     FUNCTION = "execute"
     CATEGORY = "advanced/AI_Assistant/text"
+    DESCRIPTION = """
+黑名單功能，分別輸入需移除的提示以逗號分隔即可
 
+EX:
+base_prompt= masterpiece, best quality,lineart,sketch,transparent background
+Blacklist Prompt=lineart,sketch,
+輸出則為:masterpiece, best quality, transparent background    
+"""
     def execute(self,Blacklist_Prompt,string):
          show_help ="黑名單功能，分別輸入需移除的提示以逗號分隔即可\n\nEX:\nbase_prompt= masterpiece, best quality,lineart,sketch,transparent background\nBlacklist Prompt=lineart,sketch,\n輸出則為:\n masterpiece, best quality, transparent background"
          return (self.execute_prompt(Blacklist_Prompt,string),show_help)
@@ -271,7 +299,9 @@ class resize_image_sdxl_ratio:
     RETURN_NAMES = ("Target Width","Target Height","show_help")
     FUNCTION = "execute"
     CATEGORY = "advanced/AI_Assistant/image"
-
+    DESCRIPTION = """
+自動輸出對應的SDXL目標尺寸與ImageScale(圖像縮放)搭配使用並開啟剪裁功能
+    """
     def execute(self,image):
          width,height=self.resize_image_aspect_ratio(image)
          show_help ="自動輸出對應的SDXL目標尺寸與ImageScale(圖像縮放)搭配使用並開啟剪裁功能"
@@ -323,7 +353,9 @@ class noline_process:
     RETURN_NAMES = ("image","show_help",)
     FUNCTION = "process"
     CATEGORY = "advanced/AI_Assistant/image"
-
+    DESCRIPTION = """
+將輸入圖像移除線條並將顏色取近似值用於I2I
+    """
 
     def process(self, image,):
         show_help ="將輸入圖像移除線條並將顏色取近似值用於I2I\n"
