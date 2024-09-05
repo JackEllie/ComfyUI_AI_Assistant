@@ -1,7 +1,7 @@
 [project]
 name = "comfyui_ai_assistant"
 description = "ComfyUI native implementation of [AI-Assistant](https://github.com/tori29umai0123/AI-Assistant)."
-version = "1.0.2"
+version = "1.0.3"
 license = "LICENSE"
 dependencies = ["opencv-python"]
 

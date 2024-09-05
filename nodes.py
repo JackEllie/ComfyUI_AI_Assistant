@@ -231,8 +231,7 @@ base_prompt = masterpiece, best quality, monochrome, greyscale,blue_hair, blue_s
 
 removeprompt = pink, red, orange, brown, yellow, green, blue, purple, blonde, colored skin, white hair,
 
-輸出則為:
-masterpiece, best quality, monochrome, greyscale
+輸出則為:masterpiece, best quality, monochrome, greyscale
 """
 
     def execute(self,string,Clean_Prompt):
